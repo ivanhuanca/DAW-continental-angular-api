@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DAW-continental-angular-api": {
+    "crud-api-ventamax": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/daw-continental-angular-api",
+            "outputPath": "dist/crud-api-ventamax",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/bootstrap.min.js",
+              "node_modules/pooper.js/dist/pooper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -60,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "DAW-continental-angular-api:build:production"
+              "browserTarget": "crud-api-ventamax:build:production"
             },
             "development": {
-              "browserTarget": "DAW-continental-angular-api:build:development"
+              "browserTarget": "crud-api-ventamax:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DAW-continental-angular-api:build"
+            "browserTarget": "crud-api-ventamax:build"
           }
         },
         "test": {
